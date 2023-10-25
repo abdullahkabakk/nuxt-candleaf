@@ -1,6 +1,6 @@
 <template>
   <nav class="w-full fixed top-0 left-0 right-0 bg-white transition-colors duration-300 dark:bg-background-dark z-10 flex">
-    <div class="mx-auto max-w-screen-xl my-3 h-full w-full flex justify-around">
+    <div class="xl:mx-auto mx-4 max-w-screen-xl my-3 h-full w-full flex justify-between">
       <div>
         <nuxt-link to="/">
           <img src="logo.png" alt="logo" />

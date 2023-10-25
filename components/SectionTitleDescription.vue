@@ -12,6 +12,8 @@ const props = defineProps({
 </script>
 
 <template>
+  <div class="mb-5">
   <h2 class="text-3xl text-center">{{ props.title }}</h2>
   <p class="mt-2 text-center text-gray-600 dark:text-gray-300">{{ props.description }}</p>
+  </div>
 </template>

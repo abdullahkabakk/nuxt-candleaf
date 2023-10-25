@@ -1,14 +1,7 @@
 <template>
-  <div class="max-w-screen h-full transition-colors duration-500 min-h-screen flex flex-col bg-white dark:bg-background-dark">
-    <NavBar />
-    <NatureCandle />
-    <ProductsSection/>
-    <ProductProperties/>
-    <CustomerReviews/>
-      <PopularProducts />
-<Footer />
-
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <script setup>

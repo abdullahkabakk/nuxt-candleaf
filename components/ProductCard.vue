@@ -16,7 +16,7 @@ const props = defineProps({
       <img :src="props.product?.img" alt="Product Image" class="mx-auto">
     </div>
     <div class="mx-auto p-4">
-      <h2 class="hover:underline font-semibold text-background-dark dark:text-background-light text-lg">{{ props.product?.name }}</h2>
+      <NuxtLink :to="`/product/${props.product?.id}`" class="hover:underline font-semibold text-background-dark dark:text-background-light text-lg">{{ props.product?.name }}</NuxtLink>
       <p class="mt-3 text-card-dark dark:text-card-light">{{ props.product?.description }}</p>
       <div class="flex items-center justify-between mt-2">
         <p class="text-my-auto">{{ props.product?.price }}$</p>

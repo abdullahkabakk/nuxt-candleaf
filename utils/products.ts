@@ -1,13 +1,3 @@
-import Image1 from '../public/image1.png'
-import Image2 from '../public/image1-1.png'
-import Image3 from '../public/image1-2.png'
-import Image4 from '../public/image1-3.png'
-import Image5 from '../public/image1-4.png'
-import Image6 from '../public/image1-5.png'
-import Image7 from '../public/image1-6.png'
-import Image8 from '../public/image1-7.png'
-
-
 export type Product = {
     img: string
     name: string
@@ -18,56 +8,56 @@ export type Product = {
 
 const products : Product[] = [
     {
-        img: Image1,
+        img: '/image1.png',
         name: 'Spiced Mint',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 0,
     },
     {
-        img: Image2,
+        img: '/image1-1.png',
         name: 'Sweet Strawberry',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 1,
     },
     {
-        img: Image3,
+        img: '/image1-2.png',
         name: 'Cool Blueberries',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 2,
     },
     {
-        img: Image4,
+        img: '/image1-3.png',
         name: 'Fresh Lemon',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 3,
     },
     {
-        img: Image5,
+        img: '/image1-4.png',
         name: 'Juicy Orange',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 4,
     },
     {
-        img: Image6,
+        img: '/image1-5.png',
         name: 'Sweet Cherry',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 5,
     },
     {
-        img: Image7,
+        img: '/image1-6.png',
         name: 'Fresh Apple',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',
         id: 6,
     },
     {
-        img: Image8,
+        img: '/image1-7.png',
         name: 'Sweet Peach',
         price: 9.99,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.',

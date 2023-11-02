@@ -13,7 +13,7 @@ const props = defineProps({
 <template>
   <Card>
     <div class="bg-primary/10 dark:bg-cardImage-dark mx-auto rounded-t-lg">
-      <img :src="props.product?.img" alt="Product Image" class="mx-auto">
+      <NuxtImg :src="`/${props.product?.img}` ?? ''" format="webp" sizes="20vw" alt="Product Image" class="mx-auto"/>
     </div>
     <div class="mx-auto p-4">
       <NuxtLink :to="`/product/${props.product?.id}`" class="hover:underline font-semibold text-background-dark dark:text-background-light text-lg">{{ props.product?.name }}</NuxtLink>

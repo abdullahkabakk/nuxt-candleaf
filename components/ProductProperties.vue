@@ -17,7 +17,7 @@ import productProperties from "~/utils/productProperties";
           <Button name="Learn more" class="w-1/4 mt-6"/>
         </div>
         <div class="my-auto ">
-          <img src="/image.png" alt="image" class="mx-auto mt-10 mb-5 rounded-lg md:mt-0 md:mb-0">
+          <NuxtImg src="/image.png" alt="Product Image" format="webp" class="mx-auto mt-10 mb-5 rounded-lg md:mt-0 md:mb-0" width="434" height="301"/>
         </div>
       </div>
     </Container>

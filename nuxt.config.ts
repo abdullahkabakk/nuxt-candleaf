@@ -7,6 +7,13 @@ export default defineNuxtConfig({
   tailwindcss: {
     configPath: './tailwind.config.js'
   },
+  app:{
+  head: {
+    htmlAttrs: {
+      lang: 'en-US'
+    }
+  }
+  },
   devtools: {
     enabled: true,
 

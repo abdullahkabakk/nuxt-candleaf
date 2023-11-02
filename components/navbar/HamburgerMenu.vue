@@ -10,8 +10,8 @@ function changeColorMode() {
 </script>
 
 <template>
-  <UPopover>
-    <UButton color="white" variant="link" trailing-icon="i-heroicons-bars-3-solid" />
+  <UPopover id="hamburger-button" aria-label="Hamburger Popover">
+    <UButton id="hamburger-menu" aria-label="Hamburger Menu" color="white" variant="link" trailing-icon="i-heroicons-bars-3-solid" />
     <template #panel>
       <div class="flex flex-col w-40 ml-auto space-y-2">
         <NuxtLink to="/home">

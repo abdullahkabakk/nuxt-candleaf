@@ -1,0 +1,33 @@
+{
+  "home": {
+    "nav": {
+      "discovery": "Discovery",
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "marketingCard": {
+      "title": "The nature candle",
+      "description": "All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments.",
+      "button": "Discover Our Collection"
+    },
+    "productProperties": {
+      "title": "Clean and fragrant soy wax",
+      "description": "Made for your home and for your wellness",
+      "button": "Learn more"
+    },
+    "customerReviews": {
+      "title": "Testimonials",
+      "description": "Some quotes from our happy customers"
+    },
+    "popularProducts": {
+      "title": "Popular Products",
+      "description": "Our top selling product that you may like"
+    },
+    "footer": {
+      "title": "Candleaf",
+      "description": "Your natural candle made for your home and for your wellness.",
+      "allRightsReserved": "All rights reserved"
+    }
+  }
+}

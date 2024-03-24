@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import footerLinks from "~/utils/footerLinks";
+import footerLinks from '~/utils/footerLinks';
 </script>
 
 <template>

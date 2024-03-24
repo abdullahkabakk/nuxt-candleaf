@@ -28,6 +28,10 @@
       "title": "Candleaf",
       "description": "Your natural candle made for your home and for your wellness.",
       "allRightsReserved": "All rights reserved"
+    },
+    "products": {
+      "title": "Products",
+      "description": "Order it for you or for your beloved ones"
     }
   }
 }

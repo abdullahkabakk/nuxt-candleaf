@@ -4,4 +4,4 @@
       <MarketingCard />
     </div>
   </div>
-  </template>
+</template>

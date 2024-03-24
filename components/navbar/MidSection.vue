@@ -1,20 +1,20 @@
 <script setup lang="ts">
-const items = [
-  {
-    label: "Profile",
-    avatar: {
-      src: "https://avatars.githubusercontent.com/u/739984?v=4",
-    },
-  },
-];
+import { items } from '~/utils/menu';
 </script>
 
 <template>
   <UDropdown :items="items" mode="hover" :popper="{ placement: 'bottom-start' }">
-    <UButton color="white" label="Discovery" trailing-icon="i-heroicons-chevron-down-20-solid" class="text-md font-normal" variant="ghost" />
+    <UButton
+      color="white"
+      :label="$t('home.nav.discovery')"
+      trailing-icon="i-heroicons-chevron-down-20-solid"
+      class="text-md font-normal"
+      variant="ghost"
+    />
   </UDropdown>
   <div class="my-auto space-x-4">
-    <NuxtLink to="/home" class="hover:underline">About</NuxtLink>
-    <NuxtLink to="/contact" class="hover:underline">Contact</NuxtLink>
+    <NuxtLink v-for="link in ['home', 'contact', 'about']" :to="`/${link}`" class="hover:underline">{{
+      $t(`home.nav.${link}`)
+    }}</NuxtLink>
   </div>
 </template>

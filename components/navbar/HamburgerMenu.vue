@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { items } from '~/utils/menu';
-
 const colorMode = useColorMode();
 const colorModeIcon = computed(() => (colorMode.value === 'light' ? 'i-heroicons-sun' : 'i-heroicons-moon'));
-
 const changeColorMode = () => (colorMode.value = colorMode.value === 'light' ? 'dark' : 'light');
 </script>
 

@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import SectionTitleDescription from '~/components/SectionTitleDescription.vue';
-import customers from '~/utils/customers';
-</script>
-
 <template>
   <div class="bg-primary/10 dark:bg-background-dark py-20">
     <SectionTitleDescription

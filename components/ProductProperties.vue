@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import productProperties from '~/utils/productProperties';
-</script>
-
 <template>
   <div class="bg-gray-50 dark:bg-card-dark mt-12 py-16">
     <Container>

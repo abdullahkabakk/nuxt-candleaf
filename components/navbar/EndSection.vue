@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
+const store = useCartStore();
 const colorModeIcon = computed(() => (colorMode.value === 'light' ? 'i-heroicons-sun' : 'i-heroicons-moon'));
 const changeColorMode = () => (colorMode.value = colorMode.value === 'light' ? 'dark' : 'light');
 </script>
@@ -13,14 +14,18 @@ const changeColorMode = () => (colorMode.value = colorMode.value === 'light' ? '
   >
     <Icon name="iconamoon:profile" class="h-6 w-6 text-black dark:text-white" />
   </UButton>
-  <UButton
-    id="cart"
-    aria-label="Cart"
-    color="link"
-    class="hover:bg-gray-100 dark:hover-bg-gray-800 dark:hover:bg-gray-600"
-  >
-    <Icon name="mdi:cart-outline" class="h-6 w-6 text-black dark:text-white" />
-  </UButton>
+  <NuxtLink to="/cart">
+    <UButton
+      id="cart"
+      aria-label="Cart"
+      color="link"
+      class="hover:bg-gray-100 dark:hover-bg-gray-800 dark:hover:bg-gray-600"
+    >
+      <UChip :text="store.getCartLength" size="lg">
+        <Icon name="mdi:cart-outline" class="h-6 w-6 text-black dark:text-white" />
+      </UChip>
+    </UButton>
+  </NuxtLink>
   <UButton
     id="colorSwitcher"
     aria-label="Light & Dark Mode"

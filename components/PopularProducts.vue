@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SectionTitleDescription from '~/components/SectionTitleDescription.vue';
 const getRandomProduct = () => products[Math.floor(Math.random() * products.length)];
 </script>
 

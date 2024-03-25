@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { items } from '~/utils/menu';
-</script>
-
 <template>
   <UDropdown :items="items" mode="hover" :popper="{ placement: 'bottom-start' }">
     <UButton

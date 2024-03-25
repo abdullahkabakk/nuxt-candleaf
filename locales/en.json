@@ -33,5 +33,26 @@
       "title": "Products",
       "description": "Order it for you or for your beloved ones"
     }
+  },
+  "productDetail": {
+    "productsHandmade": "All hand-made with natural soy wax, Candleaf is made for your pleasure moments.",
+    "freeShipping": "Free shipping for orders over $50",
+    "quantity": "Quantity",
+    "oneTimePurchase": "One-time purchase",
+    "subscribeAndDeliverEvery": "Subscribe and delivery every",
+    "everyMonth": "every month",
+    "everyTwoMonths": "every two months",
+    "everyThreeMonths": "every three months",
+    "addToCart": "Add to cart",
+    "subscribeGetDiscount": "Subscribe now and get a 10% discount on every recurring order",
+    "discountWillAppliedCheckout": "Discount will be applied at checkout",
+    "seeDetails": "See details",
+    "labels": {
+      "wax": "Wax",
+      "weight": "Weight",
+      "burnTime": "Burn time",
+      "fragrance": "Fragrance",
+      "dimensions": "Dimensions"
+    }
   }
 }

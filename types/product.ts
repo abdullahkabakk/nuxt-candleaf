@@ -4,4 +4,9 @@ export type Product = {
   price: number;
   description: string;
   id: number;
+  wax: string;
+  fragrance: string;
+  burning_time: string;
+  dimension: string;
+  weight: string;
 };

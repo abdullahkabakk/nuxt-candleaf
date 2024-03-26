@@ -10,7 +10,7 @@
         <div
           v-for="(item, idx) in cart"
           :key="idx"
-          class="flex my-5 flex-col md:flex-row border rounded-lg p-4 gap-5 shadow-md"
+          class="flex my-5 flex-col md:flex-row border dark:border-gray-600 rounded-lg p-4 gap-5 shadow-md"
         >
           <NuxtImg
             :src="`${getItem(item.id).img}`"
@@ -71,7 +71,9 @@
       <!-- Payment Summary -->
       <div class="col-span-1">
         <h2 class="font-bold text-lg">Payment Summary</h2>
-        <div class="sticky top-20 right-0 mt-5 border text-gray-700 dark:text-gray-300 rounded-lg p-4 shadow-md">
+        <div
+          class="sticky top-20 dark:border-gray-600 right-0 mt-5 border text-gray-700 dark:text-gray-300 rounded-lg p-4 shadow-md"
+        >
           <!-- Payment Details -->
           <div class="flex justify-between mb-3">
             <span class="">Subtotal:</span>
@@ -81,13 +83,14 @@
             <span class="">Shipping:</span>
             <span>Free</span>
           </div>
-          <hr class="my-2 border-gray-200" />
+          <hr class="my-2 border-gray-200 dark:border-gray-600" />
           <div class="flex justify-between font-semibold text-lg">
             <span>Total:</span>
             <span>${{ calculateTotal().toFixed(2) }}</span>
           </div>
           <!-- Checkout Button -->
           <button
+            @click="$router.push('/cart/details')"
             class="mt-4 w-full py-2 bg-primary text-white rounded-md focus:outline-none hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105"
           >
             Proceed to Checkout

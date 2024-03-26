@@ -75,7 +75,7 @@
           <!-- Payment Details -->
           <div class="flex justify-between mb-3">
             <span class="">Subtotal:</span>
-            <span class="font-semibold">${{ calculateSubtotal() }}</span>
+            <span class="font-semibold">${{ calculateSubtotal().toFixed(2) }}</span>
           </div>
           <div class="flex justify-between mb-3">
             <span class="">Shipping:</span>
@@ -84,7 +84,7 @@
           <hr class="my-2 border-gray-200" />
           <div class="flex justify-between font-semibold text-lg">
             <span>Total:</span>
-            <span>${{ calculateTotal() }}</span>
+            <span>${{ calculateTotal().toFixed(2) }}</span>
           </div>
           <!-- Checkout Button -->
           <button

@@ -9,8 +9,8 @@
     />
   </UDropdown>
   <div class="my-auto space-x-4">
-    <NuxtLink v-for="link in ['home', 'contact', 'about']" :to="`/${link}`" class="hover:underline">{{
-      $t(`home.nav.${link}`)
+    <NuxtLink v-for="link in ['', 'contact', 'about']" :to="`/${link}`" class="hover:underline">{{
+      link === "" ? $t('home.nav.home') :$t(`home.nav.${link}`)
     }}</NuxtLink>
   </div>
 </template>

@@ -7,7 +7,7 @@ const changeColorMode = () => (colorMode.value = colorMode.value === 'light' ? '
 <template>
   <div class="flex">
     <UButton @click="changeColorMode" size="lg" color="white" :icon="colorModeIcon" variant="ghost" />
-    <UDropdown :items="items" mode="hover" :popper="{ placement: 'bottom-start' }">
+    <UDropdown :items="hamburgerMenu" mode="hover" :popper="{ placement: 'bottom-start' }">
       <UButton color="white" trailing-icon="i-heroicons-bars-3-solid" class="text-md font-normal" variant="ghost" />
     </UDropdown>
   </div>

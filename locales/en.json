@@ -54,5 +54,13 @@
       "fragrance": "Fragrance",
       "dimensions": "Dimensions"
     }
+  },
+  "cart": {
+    "paymentSummary": "Payment Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "proceedToCheckout": "Proceed to checkout"
   }
 }

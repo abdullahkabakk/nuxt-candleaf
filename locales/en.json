@@ -62,5 +62,11 @@
     "free": "Free",
     "total": "Total",
     "proceedToCheckout": "Proceed to checkout"
+  },
+  "cartDetails": {
+    "goToShipping": "Go to shipping",
+    "backToCart": "Back to cart",
+    "contact": "Contact",
+    "addToNewsletterForDiscount": "Add to newsletter and get a 10% discount on your first order"
   }
 }

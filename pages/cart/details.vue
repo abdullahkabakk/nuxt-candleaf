@@ -5,21 +5,21 @@
       <div>
         <!-- Customer Information Form -->
         <div>
-          <h2 class="text-xl font-semibold mb-3">Contact</h2>
+          <h2 class="text-xl font-semibold mb-3">{{ $t('cartDetails.contact') }}</h2>
           <FormTheInput placeholder="Email or mobile phone number" />
           <div class="mt-2 mb-8">
             <input type="checkbox" id="newsletter" class="mr-2" />
-            <label for="newsletter">Add me to Candleaf newsletter for a 10% discount</label>
+            <label for="newsletter">{{ $t('cartDetails.addToNewsletterForDiscount') }}</label>
           </div>
           <CartDetailsShippingForm />
           <!-- Proceed to Shipping and Back to Cart -->
           <div class="flex flex-row">
-            <NuxtLink to="/cart" class="text-primary my-auto underline hover:no-underline">Back to cart</NuxtLink>
+            <NuxtLink to="/cart" class="text-primary my-auto underline hover:no-underline">{{$t('cartDetails.backToCart')}}</NuxtLink>
             <button
               @click="proceedToShipping"
               class="w-1/2 md:w-1/3 ml-auto py-2 bg-primary text-white rounded-md focus:outline-none hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105"
             >
-              Go to shipping
+              {{$t('cartDetails.goToShipping')}}
             </button>
           </div>
         </div>

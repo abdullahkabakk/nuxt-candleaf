@@ -4,7 +4,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 
 [![Known Vulnerabilities](https://snyk.io/test/github/abdullahkabakk/nuxt-candleaf/badge.svg)](https://snyk.io/test/github/abdullahkabakk/nuxt-candleaf)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Table of Contents
 

@@ -14,7 +14,9 @@ export const useCartStore = defineStore('cart', {
   persist: true,
   getters: {
     getCart: (state) => state.cart,
-    getCartLength: (state) => state.cart.length
+    getCartLength: (state) => state.cart.length,
+    getCartItemsCount: (state) => state.cart.reduce((acc, item) => acc + item.count, 0),
+    getCartItemById: (state) => (id: number) => state.cart.find((item) => item.id === id),
   },
   actions: {
     addToCart(item: CartInfo): void {

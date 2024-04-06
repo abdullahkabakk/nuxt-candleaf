@@ -30,9 +30,14 @@ export const useCartStore = defineStore('cart', {
       }
     },
     updateCart(id: number, quantity: number): void {
+      if (quantity <= 0) {
+        this.removeFromCart(id);
+      }
+
       const itemIndex = this.cart.findIndex((cartItem) => cartItem.id === id);
+
       if (itemIndex !== -1) {
-        this.cart[itemIndex].count = quantity;
+          this.cart[itemIndex].count = quantity;
       }
     },
     removeFromCart(id: number): void {

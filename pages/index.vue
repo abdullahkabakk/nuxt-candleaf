@@ -1,10 +1,10 @@
 <template>
   <div class="flex flex-col">
     <NatureCandle />
-    <ProductsSection />
+    <ProductSection />
     <ProductProperties />
     <CustomerReviews />
-    <PopularProducts />
+    <ProductPopular />
   </div>
 </template>
 

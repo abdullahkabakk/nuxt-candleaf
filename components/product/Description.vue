@@ -8,16 +8,10 @@ const count = ref(store.getCart.find((item) => item.id === id)?.count || 1);
 function changeCount(type: string): void {
   type == 'decrease' ? count.value-- : count.value++;
   count.value <= 0 ? (count.value = 1) : count;
+  store.updateCart(id, count.value);
 }
 
-function onSubmit() {
-  const item = {
-    id: id,
-    count: count.value,
-    option: purchaseOption.value
-  };
-  store.addToCart(item);
-}
+const onSubmit = () => store.addToCart({ id: id, count: count.value, option: purchaseOption.value });
 
 const isSelected = (value: string) =>
   purchaseOption.value == value ? 'border rounded-lg delay-50 duration-300 ease-in-out' : '';

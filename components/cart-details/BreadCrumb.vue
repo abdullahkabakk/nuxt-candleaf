@@ -19,19 +19,23 @@ const stepClass = (stepNumber: number): string => {
     return 'text-gray-400 dark:text-gray-600';
   }
 };
-
 </script>
 
 <template>
   <Container>
     <h1 class="font-bold text-lg sm:text-xl lg:text-2xl overflow-hidden whitespace-nowrap overflow-ellipsis">
       <template v-for="(step, index) in steps" :key="index">
-            <span
-              :class="stepClass(index)"
-              class="hover:cursor-pointer hover:underline transition duration-300 ease-in-out"
-            >
-              {{ step.name }}
-            </span>
+        <NuxtLink :to="step.path" v-if="currentStepIndex > index">
+          <span
+            :class="stepClass(index)"
+            class="hover:cursor-pointer hover:underline transition duration-300 ease-in-out"
+          >
+            {{ step.name }}
+          </span>
+        </NuxtLink>
+        <span v-else :class="stepClass(index)">
+          {{ step.name }}
+        </span>
         <span v-if="index !== steps.length - 1" class="mx-2">&gt;</span>
       </template>
     </h1>

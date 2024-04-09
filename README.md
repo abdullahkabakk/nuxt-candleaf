@@ -26,7 +26,6 @@ Candleaf is an e-commerce website dedicated to providing high-quality candles fo
 - **Fast Shipping**: Enjoy quick and reliable shipping to bring the ambiance of Candleaf candles to your doorstep.
 - **Exceptional Customer Service**: Our dedicated support team is here to assist you with any questions or concerns.
 
-
 ## Technologies
 
 The Candleaf E-Commerce Website is built using the following technologies:

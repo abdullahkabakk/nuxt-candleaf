@@ -9,12 +9,6 @@ const details = [
   [product.value.burning_time, product.value.dimension, product.value.weight]
 ];
 
-const labels = [
-  'productDetail.labels.wax',
-  'productDetail.labels.fragrance',
-  ['productDetail.labels.burnTime', 'productDetail.labels.dimensions', 'productDetail.labels.weight']
-];
-
 useSeoMeta({
   title: product.value.name,
   ogTitle: product.value.name,
@@ -31,7 +25,7 @@ useSeoMeta({
       <div>
         <ProductTitle :name="product.name" :description="product.description" />
         <ProductDescription :price="product.price" :id="product.id" />
-        <ProductDetails :details="details" :labels="labels" />
+        <ProductDetails :details="details" :labels="productLabels" />
       </div>
     </div>
   </Container>

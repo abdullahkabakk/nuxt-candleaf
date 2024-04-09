@@ -11,7 +11,6 @@ export const items = [
     {
       label: 'Most Sold',
       icon: 'i-heroicons-shopping-bag'
-    },
-
-  ],
+    }
+  ]
 ];

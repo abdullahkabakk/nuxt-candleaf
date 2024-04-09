@@ -14,7 +14,7 @@ export const hamburgerMenu = [
       label: 'About',
       icon: 'i-heroicons-information-circle',
       to: '/about'
-    },
+    }
   ],
   [
     {
@@ -28,17 +28,17 @@ export const hamburgerMenu = [
     {
       label: 'Most Sold',
       icon: 'i-heroicons-shopping-bag'
-    },
+    }
   ],
   [
     {
       label: 'Profile',
-      icon: 'i-heroicons-user',
+      icon: 'i-heroicons-user'
     },
     {
       label: 'Cart',
       icon: 'i-heroicons-shopping-cart',
       to: '/cart'
-    },
+    }
   ]
-]
+];

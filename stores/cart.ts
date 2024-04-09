@@ -1,4 +1,5 @@
 import type CartInfo from '~/types/cartInfo';
+import { useProductStore } from '~/stores/product';
 
 interface State {
   cart: CartInfo[];
@@ -15,8 +16,14 @@ export const useCartStore = defineStore('cart', {
   getters: {
     getCart: (state) => state.cart,
     getCartLength: (state) => state.cart.length,
+    getCartTotal: (state) => {
+      const productStore = useProductStore();
+      let sum = 0;
+      state.cart.map((item) => (sum += item.count * (productStore.getProduct(item.id) ?? { price: 0 }).price));
+      return sum;
+    },
     getCartItemsCount: (state) => state.cart.reduce((acc, item) => acc + item.count, 0),
-    getCartItemById: (state) => (id: number) => state.cart.find((item) => item.id === id),
+    getCartItemById: (state) => (id: number) => state.cart.find((item) => item.id === id)
   },
   actions: {
     addToCart(item: CartInfo): void {
@@ -37,7 +44,7 @@ export const useCartStore = defineStore('cart', {
       const itemIndex = this.cart.findIndex((cartItem) => cartItem.id === id);
 
       if (itemIndex !== -1) {
-          this.cart[itemIndex].count = quantity;
+        this.cart[itemIndex].count = quantity;
       }
     },
     removeFromCart(id: number): void {

@@ -6,7 +6,7 @@
       </NuxtLink>
     </div>
     <div>
-      <CartDetailsBreadCrumb/>
+      <CartDetailsBreadCrumb />
       <NuxtPage />
     </div>
   </div>

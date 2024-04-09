@@ -7,6 +7,8 @@
       {{ $t('home.marketingCard.title') }}
     </h1>
     <p class="mt-2">{{ $t('home.marketingCard.description') }}</p>
-    <Button class="md:w-2/3 mx-auto mt-10 whitespace-nowrap" :name="$t('home.marketingCard.button')" />
+    <NuxtLink to="#product" class="md:w-2/3 bg-primary rounded-lg p-4 hover:scale-105 mx-auto mt-10 whitespace-nowrap">
+      <span>{{ $t('home.marketingCard.button') }}</span>
+    </NuxtLink>
   </div>
 </template>

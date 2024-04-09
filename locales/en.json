@@ -61,12 +61,109 @@
     "shipping": "Shipping",
     "free": "Free",
     "total": "Total",
-    "proceedToCheckout": "Proceed to checkout"
+    "proceedToCheckout": "Proceed to checkout",
+    "cartEmpty": {
+      "title": "Your cart is empty",
+      "description": "Looks like you haven't added any items to your cart yet. Start shopping now!",
+      "button": "Start Shopping"
+    }
   },
   "cartDetails": {
     "goToShipping": "Go to shipping",
     "backToCart": "Back to cart",
     "contact": "Contact",
-    "addToNewsletterForDiscount": "Add to newsletter and get a 10% discount on your first order"
+    "addToNewsletterForDiscount": "Add to newsletter and get a 10% discount on your first order",
+    "couponCode": "Coupon Code",
+    "addCode": "Add Code",
+    "subTotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingWillBeCalculatedNextStep": "Calculated at the next step",
+    "total": "Total",
+    "cart": "Cart"
+  },
+  "about": {
+    "welcomeTitle": "Welcome to Candleaf",
+    "aboutCandleafVision": "At Candleaf, we believe in the transformative power of candles. Nestled in the heart of artisanal craftsmanship, we meticulously curate each candle to ignite a symphony of senses, elevating your everyday moments into extraordinary experiences.",
+    "candlesQuality": "Embrace the essence of tranquility with our premium handcrafted candles, meticulously crafted with natural soy wax. As stewards of sustainability, we ensure that every burn is not only a testament to luxury but also a commitment to eco-conscious living.",
+    "candleCollection": "Explore our thoughtfully curated collection and embark on a sensory journey. From the flicker of the flame to the subtle infusion of fragrances, our candles transcend mere illumination, encapsulating moments of serenity and bliss."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions, feedback, or just want to say hello? We'd love to hear from you! Get in touch with us using the form below, and we'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    }
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Welcome to Candleaf's Privacy Policy. Your privacy is important to us, and we are committed to protecting your personal information.",
+    "policyDescription": "This Privacy Policy outlines how Candleaf collects, uses, maintains, and discloses information collected from users (each, a \"User\") of the Candleaf website (\"Site\"). This privacy policy applies to the Site and all products and services offered by Candleaf.",
+    "informationWeCollect": "Information We Collect",
+    "informationWeCollectDescription": "We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, place an order, subscribe to the newsletter, fill out a form, and in connection with other activities, services, features, or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone number, and credit card information. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us.",
+    "howWeCollect": "How We Use Collected Information",
+    "howWeCollectDescription": "Candleaf may collect and use Users personal information for the following purposes",
+    "howWeCollectList": {
+      "improveCustomerService": "To improve customer service: Information you provide helps us respond to your customer service requests and support needs more efficiently.",
+      "personalizeUserExp": "To personalize user experience: We may use information in the aggregate to understand how our Users as a group use the services and resources provided on our Site.",
+      "processTransition": "To process transactions: We may use the information Users provide about themselves when placing an order only to provide service to that order. We do not share this information with outside parties except to the extent necessary to provide the service."
+    },
+    "sharingPersonalInfo": "Sharing Your Personal Information",
+    "sharingPersonalInfoDesc": " We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates, and advertisers for the purposes outlined above.",
+    "changesPrivacyPolicy": "Changes to this Privacy Policy",
+    "changesPrivacyPolicyDesc": "Candleaf has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications."
+  },
+  "help": {
+    "title": "Help Center",
+    "faq": "Frequently Asked Questions",
+    "questions": {
+      "howToOrder": "How do I place an order?",
+      "paymentMethods": "What payment methods do you accept?",
+      "trackOrder": "How can I track my order?",
+      "shipping": "Do you offer international shipping?",
+      "returnPolicy": "What is your return policy?",
+      "customerSupport": "How can I contact customer support?"
+    },
+    "answers": {
+      "howToOrder": "To place an order, simply browse our website, add the desired items to your cart, and proceed to checkout. Follow the prompts to enter your shipping and payment information, then submit your order. You will receive a confirmation email once your order is successfully placed.",
+      "paymentMethods": "We accept major credit cards (Visa, Mastercard, American Express) as well as PayPal for online payments.",
+      "trackOrder": "Once your order has shipped, you will receive a shipping confirmation email with tracking information. You can use this information to track the status of your delivery.",
+      "shipping": "Yes, we offer international shipping to select countries. Shipping rates and delivery times may vary depending on the destination. Please refer to our Shipping Information page for more details.",
+      "returnPolicy": "We want you to be completely satisfied with your purchase. If you are not satisfied with your order for any reason, you may return it within 30 days of receipt for a full refund or exchange. Please refer to our Returns & Exchanges page for more details.",
+      "customerSupport": "Our customer support team is available to assist you with any questions or concerns. You can reach us via email at ***** or by phone at ***** during our business hours (Monday-Friday, 9am-5pm EST)."
+    }
+  },
+  "shipping": {
+    "title": "Shipping Information",
+    "description": "Welcome to Candleaf's Shipping Information page. This page provides details about our shipping policies and procedures.",
+    "shippingMethods": "Shipping Methods",
+    "shippingMethodsDescription": "We offer several shipping methods to accommodate your needs",
+    "shippingTypes": {
+      "standard": "Standard Shipping",
+      "expedited": "Expedited Shipping",
+      "express": "Express Shipping",
+      "standardDescription": "Delivery within 5-7 business days.",
+      "expeditedDescription": "Delivery within 2-3 business days.",
+      "expressDescription": "Delivery within 1-2 business days."
+    },
+    "shippingNote": "Please note that shipping times may vary depending on your location and product availability.",
+    "shippingRates": "Shipping Rates",
+    "shippingRatesDescription": "Shipping rates are calculated based on the weight of your order and the shipping method selected. You can view the shipping costs at checkout before completing your purchase.",
+    "orderProcessing": "Order Processing",
+    "orderProcessingDescription": "Once your order is placed, please allow 1-2 business days for processing. Orders placed on weekends or holidays will be processed the following business day.",
+    "trackingOrder": "Tracking Your Order",
+    "trackingOrderDescription": "Once your order has shipped, you will receive a shipping confirmation email with tracking information. You can use this information to track the status of your delivery."
+  },
+  "termsConditions": {
+    "title": "Terms & Conditions",
+    "description": "Welcome to Candleaf's Terms & Conditions. These terms and conditions outline the rules and regulations for the use of Candleaf's website.",
+    "byAccessingWebsite": "By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use Candleaf's website if you do not accept all of the terms and conditions stated on this page.",
+    "followingTerminology": "The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all Agreements: \"Client\", \"You\" and \"Your\" refers to you, the person accessing this website and accepting the Company’s terms and conditions. \"The Company\", \"Ourselves\", \"We\", \"Our\" and \"Us\", refers to our Company. \"Party\", \"Parties\", or \"Us\", refers to both the Client and ourselves, or either the Client or ourselves. All terms refer to the offer, acceptance, and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner, whether by formal meetings of a fixed duration, or any other means, for the express purpose of meeting the Client’s needs in respect of the provision of the Company’s stated services/products, in accordance with and subject to, prevailing law of. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.",
+    "license": "License",
+    "licenseDescription": "Unless otherwise stated, Candleaf and/or its licensors own the intellectual property rights for all material on Candleaf. All intellectual property rights are reserved. You may view and/or print pages from https://www.candleaf.com for your own personal use subject to restrictions set in these terms and conditions.",
+    "variationTerms": "Variation of Terms",
+    "variationTermsDescription": "Candleaf is permitted to revise these terms at any time as it sees fit, and by using this website you are expected to review these terms on a regular basis."
   }
 }

@@ -12,7 +12,6 @@
               <span class="font-bold">{{ item.title }}:</span> {{ item.description }}
             </li>
           </ul>
-          <Button :name="$t('home.productProperties.button')" class="w-1/4 mt-6" />
         </div>
         <div class="my-auto">
           <NuxtImg

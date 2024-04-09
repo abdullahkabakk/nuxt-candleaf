@@ -21,15 +21,11 @@ const footerLinks: FooterLink[] = [
     links: [
       {
         name: 'Help',
-        link: '#'
+        link: '/help'
       },
       {
         name: 'Shipping',
-        link: '#'
-      },
-      {
-        name: 'Affiliate',
-        link: '#'
+        link: '/shipping'
       }
     ]
   },
@@ -38,15 +34,15 @@ const footerLinks: FooterLink[] = [
     links: [
       {
         name: 'Contact Us',
-        link: '#'
+        link: '/contact'
       },
       {
         name: 'Privacy Policy',
-        link: '#'
+        link: 'privacy-policy'
       },
       {
         name: 'Terms & Conditions',
-        link: '#'
+        link: '/terms-conditions'
       }
     ]
   }

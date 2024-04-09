@@ -1,0 +1,18 @@
+{
+  "index": {
+    "en": "/",
+    "tr": "/anasayfa"
+  },
+  "cart/index": {
+    "en": "/cart",
+    "tr": "/sepet"
+  },
+  "cart/details": {
+    "en": "/cart/details",
+    "tr": "/sepet/detay"
+  },
+  "product/[id]": {
+    "en": "/product/:id",
+    "tr": "/urun/:id"
+  }
+}

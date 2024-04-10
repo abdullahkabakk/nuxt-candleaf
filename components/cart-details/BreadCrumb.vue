@@ -19,13 +19,20 @@ const stepClass = (stepNumber: number): string => {
     return 'text-gray-400 dark:text-gray-600';
   }
 };
+
+watch(
+  () => useRouter().currentRoute.value.path,
+  (path) => {
+    currentStepIndex.value = steps.findIndex((step) => step.path === path);
+  }
+);
 </script>
 
 <template>
   <Container>
     <h1 class="font-bold text-lg sm:text-xl lg:text-2xl overflow-hidden whitespace-nowrap overflow-ellipsis">
       <template v-for="(step, index) in steps" :key="index">
-        <NuxtLink :to="step.path" v-if="currentStepIndex > index">
+        <NuxtLink @click.native="currentStepIndex = index" :to="step.path" v-if="currentStepIndex > index">
           <span
             :class="stepClass(index)"
             class="hover:cursor-pointer hover:underline transition duration-300 ease-in-out"

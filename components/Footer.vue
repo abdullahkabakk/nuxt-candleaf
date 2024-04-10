@@ -8,7 +8,7 @@
           </NuxtLink>
           <div class="text-white w-60">{{ $t('home.footer.description') }}</div>
         </div>
-        <div class="grid grid-cols-2 gap-8 sm:gap-6 mt-10 sm:grid-cols-3">
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 mt-10">
           <FooterColumn />
         </div>
       </div>

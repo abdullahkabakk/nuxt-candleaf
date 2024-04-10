@@ -1,43 +1,117 @@
+<script setup lang="ts">
+const { $locally } = useNuxtApp();
+import { shippingFields, shippingSchema } from '~/forms/cart-details';
+import axios from 'axios';
+
+const countries = ref([]);
+const cityOptions = ref([]);
+const isLoading = ref(true);
+const isSelected = ref(false);
+const isCitySelected = ref(false);
+const { t } = useI18n();
+const toast = useToast();
+
+async function fetchCountries() {
+  const response = await fetch('https://restcountries.com/v3.1/all');
+  const data = await response.json();
+  return data.map((country: any) => ({
+    name: country.name.common,
+    code: country.cca2
+  }));
+}
+
+async function fetchCities(country: string) {
+  isCitySelected.value = false;
+  const response = await axios.post('https://countriesnow.space/api/v0.1/countries/cities', {
+    country: country
+  });
+
+  cityOptions.value = response.data.data.map((city: any) => ({
+    name: city,
+    value: city
+  }));
+
+  isSelected.value = true;
+  isCitySelected.value = true;
+}
+
+onMounted(() => {
+  fetchCountries().then((data) => {
+    countries.value = data;
+  });
+
+  isLoading.value = false;
+});
+
+function proceedToShipping(val: any, resetForm: any) {
+  // save to local storage
+  $locally.setItem('shipping', JSON.stringify(val));
+  // reset form
+  resetForm.resetForm();
+
+  toast.add({ title: t('common.processSuccess') });
+  // redirect to shipping page
+  setInterval(() => {
+    useRouter().push('/cart/shipping');
+  }, 1500);
+}
+</script>
+
 <template>
   <div class="mb-6">
-    <h2 class="text-xl font-semibold mb-2">Shipping Address</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-      <FormTheInput placeholder="Name" icon="material-symbols:person" />
-      <FormTheInput placeholder="Second Name" icon="material-symbols:person" />
-    </div>
-    <FormTheInput placeholder="Address and number" icon="material-symbols:home" class="mb-4" />
-    <FormTheInput placeholder="Shipping note (optional)" icon="material-symbols:notes" class="mb-4" />
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-      <FormTheInput placeholder="City" icon="material-symbols:location-city" />
-      <FormTheInput placeholder="Postal Code" icon="material-symbols:local-post-office" />
-      <div class="relative">
-        <select
-          class="w-full border border-gray-300 rounded-md py-3 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+    <h2 class="text-xl font-semibold mb-2">{{ $t('shippingForm.title') }}</h2>
+    <VForm @submit="proceedToShipping" :validation-schema="shippingSchema">
+      <Builder :form-fields="shippingFields" />
+      <FormSelect
+        v-if="!isLoading"
+        @change="fetchCities($event.target.value)"
+        name="country"
+        value-key="name"
+        label-key="name"
+        :options="countries"
+        :placeholder="$t('shippingForm.form.country.placeholder')"
+        :label="$t('shippingForm.form.country.label')"
+      />
+      <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-2" v-if="isSelected">
+        <FormSelect
+          :disabled="isCitySelected"
+          label-key="name"
+          value-key="value"
+          name="city"
+          :options="cityOptions"
+          :placeholder="$t('shippingForm.form.city.placeholder')"
+          :label="$t('shippingForm.form.city.label')"
+        />
+        <FormInput
+          name="state"
+          type="text"
+          :placeholder="$t('shippingForm.form.state.placeholder')"
+          :label="$t('shippingForm.form.state.label')"
+        />
+        <FormInput
+          name="zip"
+          type="text"
+          :placeholder="$t('shippingForm.form.zip.placeholder')"
+          :label="$t('shippingForm.form.zip.label')"
+        />
+      </div>
+      <FormInput
+        name="note"
+        type="text"
+        :placeholder="$t('shippingForm.form.note.placeholder')"
+        :label="$t('shippingForm.form.note.label')"
+      />
+      <!-- Proceed to Shipping and Back to Cart -->
+      <div class="flex flex-row">
+        <NuxtLink to="/cart" class="text-primary my-auto underline hover:no-underline">{{
+          $t('cartDetails.backToCart')
+        }}</NuxtLink>
+        <button
+          class="w-1/2 md:w-1/3 ml-auto py-2 bg-primary text-white rounded-md focus:outline-none hover:bg-primary-dark transition duration-300 ease-in-out transform hover:scale-105"
         >
-          <option>Select Province</option>
-          <!-- Add province options -->
-        </select>
-        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-          <Icon name="lucide:chevrons-up-down" class="h-5 w-5 text-gray-400" />
-        </div>
+          {{ $t('cartDetails.goToShipping') }}
+        </button>
       </div>
-    </div>
-    <div class="relative mb-4">
-      <select
-        class="w-full border border-gray-300 rounded-md py-3 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
-      >
-        <option>Country/Region: Italy</option>
-        <!-- Add country/region options -->
-      </select>
-      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-        <Icon name="material-symbols:location-on" class="h-5 w-5 text-gray-400" />
-      </div>
-    </div>
-    <div class="flex items-center mb-4">
-      <input id="save-info" type="checkbox" class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded" />
-      <label for="save-info" class="ml-2 block text-sm text-gray-900 dark:text-gray-300">
-        Save this informations for a future fast checkout
-      </label>
-    </div>
+    </VForm>
   </div>
 </template>

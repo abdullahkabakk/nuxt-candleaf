@@ -9,7 +9,7 @@
           <div v-for="(item, index) in faqList" :key="index">
             <button
               @click="toggleAnswer(index)"
-              class="w-full p-4 flex border rounded-lg justify-between items-center text-gray-600 dark:text-gray-200 focus:outline-none"
+              class="w-full p-4 flex border hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg justify-between items-center text-gray-600 dark:text-gray-200 focus:outline-none"
             >
               <span class="font-semibold">{{ item.question }}</span>
               <span v-if="!item.isOpen">&#43;</span>

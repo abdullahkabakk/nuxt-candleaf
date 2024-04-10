@@ -1,4 +1,11 @@
 {
+  "common": {
+    "selectOption": "Select an option",
+    "itemAddedSuccessfully": "Item added successfully",
+    "itemRemovedSuccessfully": "Item removed successfully",
+    "itemUpdatedSuccessfully": "Item updated successfully",
+    "processSuccess": "Process completed successfully"
+  },
   "home": {
     "nav": {
       "discovery": "Discovery",
@@ -165,5 +172,119 @@
     "licenseDescription": "Unless otherwise stated, Candleaf and/or its licensors own the intellectual property rights for all material on Candleaf. All intellectual property rights are reserved. You may view and/or print pages from https://www.candleaf.com for your own personal use subject to restrictions set in these terms and conditions.",
     "variationTerms": "Variation of Terms",
     "variationTermsDescription": "Candleaf is permitted to revise these terms at any time as it sees fit, and by using this website you are expected to review these terms on a regular basis."
+  },
+  "register": {
+    "title": "Create an Account",
+    "description": "Create an account to enjoy a faster checkout process, track your orders, and receive exclusive offers and updates.",
+    "text": "Register",
+    "alreadyHaveAccount": "Already have an account?",
+    "clickHereToLogin": "Click here to login",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Please enter your name",
+        "required": "Name is required"
+      },
+      "email": {
+        "label": "Email",
+        "required": "Email is required",
+        "placeholder": "Please enter your email",
+        "invalid": "Email is invalid"
+      },
+      "password": {
+        "label": "Password",
+        "required": "Password is required",
+        "placeholder": "Please enter your password",
+        "minLength": "Password must be at least 6 characters"
+      },
+      "surname": {
+        "label": "Surname",
+        "placeholder": "Please enter your surname",
+        "required": "Surname is required"
+      },
+      "username": {
+        "label": "Username",
+        "placeholder": "Please enter your username",
+        "required": "Username is required"
+      }
+    }
+  },
+  "login": {
+    "title": "Login to Your Account",
+    "description": "Welcome back! Please login to your account to continue shopping.",
+    "text": "Login",
+    "dontHaveAccount": "Don't have an account?",
+    "clickHereToRegister": "Click here to register",
+    "form": {
+      "username": {
+        "label": "Username",
+        "placeholder": "Please enter your username",
+        "required": "Username is required"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Please enter your password",
+        "required": "Password is required"
+      }
+    }
+  },
+  "shippingForm": {
+    "title": "Shipping Form",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Please enter your name",
+        "required": "Name is required"
+      },
+      "surname": {
+        "label": "Surname",
+        "placeholder": "Please enter your surname",
+        "required": "Surname is required"
+      },
+      "address": {
+        "label": "Address",
+        "placeholder": "Please enter your address",
+        "required": "Address is required"
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "Please enter your city",
+        "required": "City is required"
+      },
+      "note": {
+        "label": "Note",
+        "placeholder": "Please enter your note"
+      },
+      "zip": {
+        "label": "Zip",
+        "placeholder": "Please enter your zip",
+        "required": "Zip is required"
+      },
+      "country": {
+        "label": "Country",
+        "placeholder": "Please enter your country",
+        "required": "Country is required"
+      },
+      "state": {
+        "label": "State",
+        "placeholder": "Please enter your state",
+        "required": "State is required"
+      }
+    }
+  },
+  "shippingDetails": {
+    "title": "Shipping Information",
+    "shippingTo": "Shipping to",
+    "shippingOptions": "Shipping Options"
+  },
+  "payment": {
+    "title": "Payment Information",
+    "cardHolder": "Cardholder Name",
+    "cardNumber": "Card Number",
+    "expirationDate": "Expiration Date",
+    "cvv": "CVV",
+    "payNow": "Pay Now",
+    "paymentSuccess": "Payment Successful",
+    "pleaseFillAllFields": "Please fill in all fields"
   }
 }

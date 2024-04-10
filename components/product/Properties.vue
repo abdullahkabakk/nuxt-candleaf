@@ -5,9 +5,7 @@
       <span class="text-primary">{{ $t('home.productProperties.description') }}</span>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:gap-8">
         <div class="order-last md:order-first">
-          <ul
-            class="mt-4 space-y-2 list-inside list-image-[url(checkmark.png)] dark:list-image-[url(checkmark-dark.png)] text-card-dark dark:text-card-light"
-          >
+          <ul class="mt-4 space-y-2 list-inside text-card-dark dark:text-card-light">
             <li v-for="item in productProperties" :key="item.id">
               <span class="font-bold">{{ item.title }}:</span> {{ item.description }}
             </li>

@@ -18,22 +18,9 @@ export const hamburgerMenu = [
   ],
   [
     {
-      label: 'New Season',
-      icon: 'i-heroicons-newspaper'
-    },
-    {
-      label: 'Most Searched',
-      icon: 'i-heroicons-magnifying-glass'
-    },
-    {
-      label: 'Most Sold',
-      icon: 'i-heroicons-shopping-bag'
-    }
-  ],
-  [
-    {
       label: 'Profile',
-      icon: 'i-heroicons-user'
+      icon: 'i-heroicons-user',
+      to: '/login'
     },
     {
       label: 'Cart',

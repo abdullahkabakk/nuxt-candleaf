@@ -1,22 +1,5 @@
 const footerLinks: FooterLink[] = [
   {
-    title: 'Discovery',
-    links: [
-      {
-        name: 'New Season',
-        link: '#'
-      },
-      {
-        name: 'Most Searched',
-        link: '#'
-      },
-      {
-        name: 'Most Sold',
-        link: '#'
-      }
-    ]
-  },
-  {
     title: 'About',
     links: [
       {

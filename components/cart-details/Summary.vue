@@ -3,6 +3,8 @@ const store = useCartStore();
 const cart = store.getCart;
 const getItem = (id: number) => products.find((p) => p.id === id)!;
 
+const { shipping } = defineProps<{ shipping?: string }>();
+
 const { getCartTotal } = storeToRefs(store);
 const floatFixed = 2;
 </script>
@@ -50,12 +52,22 @@ const floatFixed = 2;
       </div>
       <div class="flex justify-between mb-2">
         <span>{{ $t('cartDetails.shipping') }}:</span>
-        <span>{{ $t('cartDetails.shippingWillBeCalculatedNextStep') }}</span>
+        <span
+          >{{
+            shipping
+              ? `$${parseFloat(shipping).toFixed(floatFixed)}`
+              : $t('cartDetails.shippingWillBeCalculatedNextStep')
+          }}
+        </span>
       </div>
       <hr class="my-2 border-gray-200" />
       <div class="flex justify-between font-semibold text-lg">
         <span>{{ $t('cartDetails.total') }}:</span>
-        <span>${{ getCartTotal.toFixed(floatFixed) }}</span>
+        <span
+          >${{
+            shipping ? (getCartTotal + parseFloat(shipping)).toFixed(floatFixed) : getCartTotal.toFixed(floatFixed)
+          }}</span
+        >
       </div>
     </div>
   </div>

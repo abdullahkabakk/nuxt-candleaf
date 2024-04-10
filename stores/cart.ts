@@ -52,6 +52,9 @@ export const useCartStore = defineStore('cart', {
       if (itemIndex !== -1) {
         this.cart.splice(itemIndex, 1);
       }
+    },
+    clearCart(): void {
+      this.cart = [];
     }
   }
 });

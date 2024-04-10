@@ -9,8 +9,19 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@vee-validate/nuxt',
   ],
+
+  veeValidate: {
+    autoImports: true,
+    componentNames: {
+      Form: 'VForm',
+      Field: 'VField',
+      FieldArray: 'VFieldArray',
+      ErrorMessage: 'VErrorMessage',
+    },
+  },
 
   colorMode: {
     classSuffix: ''

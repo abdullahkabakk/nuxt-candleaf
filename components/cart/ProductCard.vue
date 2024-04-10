@@ -1,16 +1,21 @@
 <script setup lang="ts">
+const toast = useToast();
+
 const props = defineProps(['product', 'count']);
 
 const store = useCartStore();
 const value = ref((store.getCartItemById(props.product.id) ?? { count: 0 }).count);
 const labels = ['productDetail.labels.burnTime', 'productDetail.labels.dimensions', 'productDetail.labels.weight'];
+const { t } = useI18n();
 
 const updateItem = (isIncrease: boolean) => {
   value.value += isIncrease ? 1 : -1;
   if (value.value === 0) {
     removeItem();
+    toast.add({ title: t('common.itemRemovedSuccessfully') });
   } else {
     store.updateCart(props.product.id, value.value);
+    toast.add({ title: t('common.itemUpdatedSuccessfully') });
   }
 };
 

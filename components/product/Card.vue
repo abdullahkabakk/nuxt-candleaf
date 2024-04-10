@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Product } from '~/types/product';
+const toast = useToast();
 
 // Define props
 const { product } = defineProps<{ product: Product }>();
@@ -7,6 +8,7 @@ const { product } = defineProps<{ product: Product }>();
 // Initialize variables
 const store = useCartStore();
 const count = ref(store.getCartItemById(product.id)?.count || 0);
+const { t } = useI18n();
 
 // Watch for changes in count
 watch(
@@ -15,10 +17,21 @@ watch(
 );
 
 // Function to add item to cart
-const addItem = () => store.addToCart({ id: product.id, count: 1, option: '' });
+const addItem = () => {
+  store.addToCart({ id: product.id, count: 1 });
+  toast.add({ title: t('common.itemAddedSuccessfully') });
+};
 
 // Function to update item count
-const updateItem = (isIncrease: boolean) => store.updateCart(product.id, count.value + (isIncrease ? 1 : -1));
+const updateItem = (isIncrease: boolean) => {
+  count.value = count.value + (isIncrease ? 1 : -1);
+  store.updateCart(product.id, count.value);
+  if (count.value == 0) {
+    toast.add({ title: t('common.itemRemovedSuccessfully') });
+    return;
+  }
+  toast.add({ title: t('common.itemUpdatedSuccessfully') });
+};
 </script>
 
 <template>

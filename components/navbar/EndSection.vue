@@ -4,17 +4,20 @@ const colorModeIcon = computed(() => (colorMode.value === 'light' ? 'i-heroicons
 const changeColorMode = () => (colorMode.preference = colorMode.preference === 'light' ? 'dark' : 'light');
 
 const store = useCartStore();
+const { getCartLength } = storeToRefs(store);
 </script>
 
 <template>
-  <UButton
-    color="link"
-    aria-label="Profile"
-    id="profile"
-    class="hover:bg-gray-100 dark:hover-bg-gray-800 dark:hover:bg-gray-600"
-  >
-    <Icon name="iconamoon:profile" class="h-6 w-6 text-black dark:text-white" />
-  </UButton>
+  <NuxtLink to="/login">
+    <UButton
+      color="link"
+      aria-label="Profile"
+      id="profile"
+      class="hover:bg-gray-100 dark:hover-bg-gray-800 dark:hover:bg-gray-600"
+    >
+      <Icon name="iconamoon:profile" class="h-6 w-6 text-black dark:text-white" />
+    </UButton>
+  </NuxtLink>
   <NuxtLink to="/cart">
     <UButton
       id="cart"
@@ -22,7 +25,7 @@ const store = useCartStore();
       color="link"
       class="hover:bg-gray-100 dark:hover-bg-gray-800 dark:hover:bg-gray-600"
     >
-      <UChip :text="store.getCartLength" size="lg">
+      <UChip :text="getCartLength" size="lg">
         <Icon name="mdi:cart-outline" class="h-6 w-6 text-black dark:text-white" />
       </UChip>
     </UButton>

@@ -10,8 +10,15 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt',
     '@nuxtjs/color-mode',
-    '@vee-validate/nuxt',
+    '@vee-validate/nuxt'
   ],
+
+  ui: {
+    notifications: {
+      // Show toasts at the top right of the screen
+      position: 'top-0 bottom-auto'
+    }
+  },
 
   veeValidate: {
     autoImports: true,
@@ -19,8 +26,8 @@ export default defineNuxtConfig({
       Form: 'VForm',
       Field: 'VField',
       FieldArray: 'VFieldArray',
-      ErrorMessage: 'VErrorMessage',
-    },
+      ErrorMessage: 'VErrorMessage'
+    }
   },
 
   colorMode: {
@@ -39,7 +46,7 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ['src/utils/**', 'src/types/**']
+    dirs: ['src/utils/**', 'src/types/**', 'src/forms/**']
   },
 
   tailwindcss: {
